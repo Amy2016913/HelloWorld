@@ -1,19 +1,19 @@
-var a, b, c: number;
+var maxline, spacenum, starnum: number;
 var starstring, spacestring: string;
 
 var x: string = process.argv[2];
 
 var num: number = parseInt(x);
 
-for (a = 0; a < num; a++) {
+for (maxline = 0; maxline < num; maxline++) {
     starstring = "";
     spacestring = "";
 
-    for (b = 0; b < (num - a - 1); b++) {
+    for (spacenum = 0; spacenum < (num - maxline - 1); spacenum++) {
         spacestring += " ";
     }
 
-    for (c = 0; c < (2 * a + 1); c++) {
+    for (starnum = 0; starnum < (2 * maxline + 1); starnum++) {
         starstring += "*";
     }
 
